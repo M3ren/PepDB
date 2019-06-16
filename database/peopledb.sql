@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Июн 16 2019 г., 18:48
+-- Время создания: Июн 16 2019 г., 20:08
 -- Версия сервера: 5.6.16-1~exp1
 -- Версия PHP: 5.6.40-0+deb8u4
 
@@ -31,8 +31,13 @@ CREATE TABLE IF NOT EXISTS `people` (
   `firstname` text NOT NULL,
   `lastname` text NOT NULL,
   `location` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Индексы сохранённых таблиц
+--
+
+--
 -- Индексы таблицы `people`
 --
 ALTER TABLE `people`
@@ -46,7 +51,7 @@ ALTER TABLE `people`
 -- AUTO_INCREMENT для таблицы `people`
 --
 ALTER TABLE `people`
-MODIFY `id` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
