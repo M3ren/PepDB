@@ -1,4 +1,3 @@
 <?php
-mysql_connect("localhost", "root", ""); // "server", "login", "password")
-mysql_select_db('database'); // Your database
+$bdd = new PDO('mysql:host=localhost;dbname=pepdb;charset=utf8', 'root', '');
 ?>

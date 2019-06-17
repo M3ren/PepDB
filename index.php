@@ -1,6 +1,6 @@
 <?php
 include 'includes/config.php'; // Include of the db connect
-$request = mysql_query("SELECT * FROM people"); // Selecting everything from table, cuz will need it down.
+$request = $bdd->query('SELECT * FROM people'); // Selecting everything from table, cuz will need it down.
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +73,7 @@ $request = mysql_query("SELECT * FROM people"); // Selecting everything from tab
                                     </thead>
                                     <tbody>
                                     	<!-- Showing the results from database. -->
-                                    <?php while ($row = mysql_fetch_assoc($request)) { ?>
+                                    <?php while ($row = $request->fetch()) { ?>
                                         <tr class="odd gradeX">
                                             <td><?php echo $row['id']; ?></td>
                                             <td><?php echo $row['firstname']; ?></td>
