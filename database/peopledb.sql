@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Июн 16 2019 г., 20:08
+-- Время создания: Июн 19 2019 г., 00:45
 -- Версия сервера: 5.6.16-1~exp1
 -- Версия PHP: 5.6.40-0+deb8u4
 
@@ -30,7 +30,9 @@ CREATE TABLE IF NOT EXISTS `people` (
 `id` int(255) NOT NULL,
   `firstname` text NOT NULL,
   `lastname` text NOT NULL,
-  `location` text NOT NULL
+  `location` text NOT NULL,
+  `dob` text NOT NULL,
+  `info` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
