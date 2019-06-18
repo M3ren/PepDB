@@ -41,7 +41,7 @@ $reponse = $bdd->query('SELECT * FROM people'); // Selecting everything from tab
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            People DB V0.1
+                            People DB V0.2
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
