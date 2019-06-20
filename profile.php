@@ -44,6 +44,15 @@ if ($row['id'] == $_GET['id']) {
                         <li>
                           <p> <span> Date of birth</span> <?php echo $row['dob']; ?> </p>
                         </li>
+                        <li>
+                          <p> <span> Nationality</span> <?php echo $row['nat']; ?> </p>
+                        </li>
+                        <li>
+                          <p> <span> Gender</span> <?php echo $row['gend']; ?> </p>
+                        </li>
+                        <li>
+                          <p> <span> Height[CM]</span> <?php echo $row['height']; ?> </p>
+                        </li>
                       </ul>
                       
                       <!-- I’m Web Designer -->
@@ -58,6 +67,6 @@ if ($row['id'] == $_GET['id']) {
 <?php	
 }
 else{
-	header("Location:includes/notfound.php");
+	header("Location:functions/notfound.php");
 }
 ?>

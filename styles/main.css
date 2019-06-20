@@ -10,3 +10,8 @@ form{
 input{
 	text-align: center;
 }
+
+select{
+	width: 37% !important;
+	margin: auto !important;
+}

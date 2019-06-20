@@ -41,7 +41,7 @@ $reponse = $bdd->query('SELECT * FROM people'); // Selecting everything from tab
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            People DB V0.2
+                            People DB V0.3
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -68,17 +68,18 @@ $reponse = $bdd->query('SELECT * FROM people'); // Selecting everything from tab
                                     </tbody>
                                 </table>
                             </div>
-<form method="POST" action="includes/process.php">
+
+<form method="POST" action="functions/process.php">
 
 
   <div class="form-group">
     <label for="formGroupExampleInput">First Name</label>
-    <input name="fname" placeholder="Family name" maxlength="30" type="text" class="form-control">
+    <input name="fname" placeholder="Family name" required="required" maxlength="30" type="text" class="form-control">
   </div>
 
   <div class="form-group">
     <label for="formGroupExampleInput2">Last Name</label>
-    <input name="lname" placeholder="Person name" type="text" maxlength="30" class="form-control">
+    <input name="lname" placeholder="Person name" required="required" type="text" maxlength="30" class="form-control">
   </div>
 
   <div class="form-group">
@@ -86,9 +87,25 @@ $reponse = $bdd->query('SELECT * FROM people'); // Selecting everything from tab
     <input name="loc" type="text" maxlength="40" class="form-control">
   </div>
 
+  <div class="form-group">
+    <label for="formGroupExampleInput4">Nationality</label>
+    <input name="nation" type="text" maxlength="40" class="form-control">
+  </div>
+
    <div class="form-group">
-    <label for="formGroupExampleInput4">Date of birth</label>
-    <input name="dateofb" type="text" maxlength="10" placeholder="01/12/2000" class="form-control">
+    <label for="formGroupExampleInput5">Date of birth</label>
+    <input name="dateofb" type="date" required="required" class="form-control">
+  </div>
+
+  <select name="gender" class="form-control">
+    <option selected disabled>Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+  </select> 
+
+  <div class="form-group">
+    <label for="formGroupExampleInput6">Height</label>
+    <input name="heightt" placeholder="In centimeters (CM) Ex= 188" type="text" maxlength="3" required="required" class="form-control">
   </div>
 
   <div class="form-group">
@@ -97,16 +114,7 @@ $reponse = $bdd->query('SELECT * FROM people'); // Selecting everything from tab
   </div>
 
   <button type="submit" name="submit" class="btn btn-warning">Submit</button>
-
-
+  
 </form>
-<script type="text/javascript">
-    var form = document.querySelector('form');
-form.addEventListener('submit', function() {
-    this.querySelector('input[type="submit"]')
-        .setAttribute('disabled', 'disabled');
-}, false);
-
-</script>
 </body>
 </html>
